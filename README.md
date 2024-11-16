@@ -7,6 +7,11 @@ To execute the code execute `process.py` with the following options:
 - `-outputfile`: the output file to write the output to (optional). If not provided, the output will be written to "output.txt"
 
 
+Example command:
+
+```python process.py -logfile logs.txt -outputfile out.txt -lookupfile lookup.csv```
+
+## Other info
 The information in each log line was referred to using the [available fields](https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html#flow-logs-fields) on the AWS Flog log records page.
 
 From the fields present, the protocol information was stored in the `proto_info` dictionary.
@@ -26,13 +31,13 @@ with open ('protocols.txt') as f:
 
 
 
-Assumptions:
+## Assumptions:
 - Tags are the same in bothe the lower and upper case. Eg. `sv_p1` is the same as `sv_P1`. The output has the tags in lower case irrespective of the input.
 - Only version 2 of the logs are supported, any logs not of version 2 will be discarded.
 - Each log should have at least 8 fields present.
 
 
-Tests:
+## Tested:
 - With various files provided or not
 - With empty lookup file
 - With various protocols
