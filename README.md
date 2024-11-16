@@ -32,7 +32,7 @@ with open ('protocols.txt') as f:
 
 
 ## Assumptions:
-- Tags are the same in bothe the lower and upper case. Eg. `sv_p1` is the same as `sv_P1`. The output has the tags in lower case irrespective of the input.
+- Tags are the same in both the lower and upper case. Eg. `sv_p1` is the same as `sv_P1`. The output has the tags in lower case irrespective of the input.
 - Only version 2 of the logs are supported, any logs not of version 2 will be discarded.
 - Each log should have at least 8 fields present.
 
